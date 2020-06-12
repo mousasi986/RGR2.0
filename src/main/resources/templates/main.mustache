@@ -1,0 +1,26 @@
+<html>
+
+<body>
+<div>Ввод данных</div>
+<div>
+    <form method="post">
+        <input type="text" name="text" placeholder="Введите номер"/>
+        <input type="text" name="tag" placeholder="Введите ФИО">
+        <input type="text" name="address" placeholder="Введите адрес"/>
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+<div>Поиск контактов</div>
+<form method="post" action="filter">
+    <input type="text" name="filter" placeholder="Введите ФИО"/>
+    <button type="submit">Найти</button>
+</form>
+{{#messages}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{text}}</span>
+        <i>{{tag}}</i>
+    </div>
+{{/messages}}
+</body>
+</html>
